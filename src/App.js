@@ -20,15 +20,15 @@ function App() {
     alert('Please enter a valid weight and height')
   } 
   else {
-    let bmi = (weight / (height * height) * 703)
+    let calculatedBmi = (weight / (height * height) * 703)
     setBmi (bmi.toFixed(1))
   }
 
   //logic for message
 
-  if(bmi < 18.5){
+  if(calculatedBmi < 18.5){
     setMessage("You are underweight")
-  } else if (bmi >= 18.5 && bmi < 25) {
+  } else if (calculatedBmi >= 18.5 && calculatedBmi < 25) {
     setMessage("You are a healthy person")
   } else {
     setMessage("You are overweight")
