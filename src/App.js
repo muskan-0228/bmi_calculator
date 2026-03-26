@@ -13,7 +13,6 @@ function App() {
   let calcBmi = (event) => {
     //preventing submitting to the server
     event.preventDefault()
-    console.log(event)
 
   //making bmi calculator formula
   if (weight === 0 || height === 0) {
@@ -22,7 +21,7 @@ function App() {
   else {
     let calculatedBmi = (weight / (height * height) * 703)
     setBmi (bmi.toFixed(1))
-  }
+  
 
   //logic for message
 
@@ -34,6 +33,7 @@ function App() {
     setMessage("You are overweight")
   }
 
+}
 }
 
 let reload = () => {
